@@ -21,11 +21,14 @@ function FuncComp(props) {
 }
 
 class ClassComp extends React.Component{
+  state = {
+    number: this.props.initNumber
+  }
   render() {
     return (
       <div className="container">
         <h2>class style component</h2>
-        <p>Number : {this.props.initNumber}</p>
+        <p>Number : {this.state.number}</p>
       </div>
     );
   }
