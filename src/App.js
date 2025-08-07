@@ -29,6 +29,11 @@ class ClassComp extends React.Component{
       <div className="container">
         <h2>class style component</h2>
         <p>Number : {this.state.number}</p>
+        <input type="button" value="random" onClick={
+          function() {
+            this.setState({number:Math.random()});
+          }.bind(this)
+        }></input>
       </div>
     );
   }
