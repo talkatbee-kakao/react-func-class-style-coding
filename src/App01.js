@@ -26,10 +26,16 @@ function FuncComp(props) {
 
   //side effect
   useEffect(function() {
-    console.log('%cfunc => useEffect' +(++funcId), funcStyle );
-    document.title = number + ' : ' +_date
+    console.log('%cfunc => useEffect A (componentDidMount & componentDidUpdate)' +(++funcId), funcStyle);
+    document.title = number + ' : ' + _date;
+
   });
-  
+
+  useEffect(function() {
+    console.log('%cfunc => useEffect B (componentDidMount & componentDidUpdate)'+(++funcId), funcStyle);
+    document.title = number + ' : ' + _date;
+  })
+
   console.log('%cfunc => render' + (++funcId), funcStyle);
 
   console.log('numberState', numberState);
